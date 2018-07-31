@@ -1,0 +1,73 @@
+# Victus Maximus
+
+## Design For Objects
+
+### Gladiator
+
+    {
+        name: string
+        stats: statsInterface
+        skin: enum
+        hair: enum
+        equipment: equipmentItems
+    }
+
+### stats
+
+    {
+        health: number
+        strength: number //base +  weapon
+        speed: number // base - (armor + weapon)
+        defense: number // base + armor
+    }
+
+### equipment
+
+    {
+        head: armorInterface
+        torso: armorInterface
+        arms: armorInterface
+        rightHand: holdable
+        leftHand: holdable
+        feet: armorInterface
+        legs: armorInterface
+    }
+
+### armor
+
+    {
+        defense: number
+        weight: number
+        name: string
+    }
+
+### holdable
+
+    {
+        type: string
+        damage: number
+        defense: number
+    }
+
+## User
+
+    {
+        name: string
+        gladiators: Gladiator[]
+        money: number
+        wins: number
+        losses: number
+    }
+
+## UI Screens
+
+### Main Menu
+
+### Buy screen
+
+### Manage Screen
+
+### View Gladiator Screen
+
+### Arena Screen 
+

@@ -1,0 +1,26 @@
+{
+  "name": "victusmaximus",
+  "version": "1.0.0",
+  "description": "GladiatorManager",
+  "main": "/dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fortythreesam/VictusMaximus.git"
+  },
+  "author": "Sam Drugan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fortythreesam/VictusMaximus/issues"
+  },
+  "homepage": "https://github.com/fortythreesam/VictusMaximus#readme",
+  "dependencies": {
+    "common-js": "^0.3.8"
+  },
+  "devDependencies": {
+    "ts-loader": "^4.4.2",
+    "typescript": "^3.0.1"
+  }
+}

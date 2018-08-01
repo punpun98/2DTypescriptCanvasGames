@@ -1,8 +1,3 @@
-# VictusMaximus
-Gladiator Manager Game
-
-Buy, train, fight and sell gladiators.
-
 ## Setting Up Dev Environment
 
 - Clone the repo

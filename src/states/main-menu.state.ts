@@ -5,8 +5,8 @@ import { State } from "./state";
 
 export class MainMenu extends State implements IState {
 
-    constructor( initCanvas: HTMLCanvasElement, initContext: CanvasRenderingContext2D) {
-        super(initCanvas, initContext);
+    constructor( initCanvas: HTMLCanvasElement, initContext: CanvasRenderingContext2D, id: States) {
+        super(initCanvas, initContext, id);
     }
 
     public update(): void {
@@ -14,7 +14,7 @@ export class MainMenu extends State implements IState {
     }
 
     public draw(): void {
-        this.context.fillText('Hello World!',100,100);
+        this.context.fillText("Hello World!", 100, 100);
         return;
     }
 }

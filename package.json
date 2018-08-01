@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/fortythreesam/VictusMaximus#readme",
   "dependencies": {
-    "common-js": "^0.3.8"
+    "common-js": "^0.3.8",
+    "rxjs": "^6.2.2"
   },
   "devDependencies": {
     "ts-loader": "^4.4.2",

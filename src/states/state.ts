@@ -1,16 +1,16 @@
 import { Key } from "../global/key-codes.enum";
-import { States } from "./states.enum";
+import { StatesAvailable } from "./states.enum";
 import { IState } from "./state.model";
 import { Subject } from "../../node_modules/rxjs/internal/Subject";
 
 export class State implements IState {
     public canvas: HTMLCanvasElement;
     public context: CanvasRenderingContext2D;
-    public id: States;
-    public addNewStateEmitter = new Subject<States>();
-    public removeStateEmitter = new Subject<States>();
+    public id: StatesAvailable;
+    public addNewStateEmitter = new Subject<StatesAvailable>();
+    public removeStateEmitter = new Subject<StatesAvailable>();
 
-    constructor( initCanvas: HTMLCanvasElement, initContext: CanvasRenderingContext2D, id: States) {
+    constructor( initCanvas: HTMLCanvasElement, initContext: CanvasRenderingContext2D, id: StatesAvailable) {
         this.canvas = initCanvas;
         this.context = initContext;
         this.id = id;
@@ -32,11 +32,19 @@ export class State implements IState {
         return;
     }
 
-    public addState( newState: States ): void {
+    public mouseDown( mouseX: number, mouseY: number ) {
+        return;
+    }
+
+    public mouseUp( mouseX: number, mouseY: number ) {
+        return;
+    }
+
+    public addState( newState: StatesAvailable ): void {
         this.addNewStateEmitter.next( newState );
     }
 
-    public removeState( returnToState?: States): void {
-        this.removeStateEmitter.next( returnToState !== undefined ? returnToState : States.PreviousState);
+    public removeState( returnToState?: StatesAvailable): void {
+        this.removeStateEmitter.next( returnToState !== undefined ? returnToState : StatesAvailable.PreviousState);
     }
 }

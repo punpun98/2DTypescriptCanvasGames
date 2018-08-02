@@ -1,11 +1,11 @@
 import { Key } from "../global/key-codes.enum";
-import { States } from "./states.enum";
+import { StatesAvailable } from "./states.enum";
 import { IState } from "./state.model";
 import { State } from "./state";
 
-export class MainMenu extends State implements IState {
+export class MainMenu extends State {
 
-    constructor( initCanvas: HTMLCanvasElement, initContext: CanvasRenderingContext2D, id: States) {
+    constructor( initCanvas: HTMLCanvasElement, initContext: CanvasRenderingContext2D, id: StatesAvailable) {
         super(initCanvas, initContext, id);
     }
 

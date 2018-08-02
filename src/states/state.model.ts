@@ -1,17 +1,19 @@
 import { Key } from "../global/key-codes.enum";
-import { States } from "./states.enum";
+import { StatesAvailable } from "./states.enum";
 import { Subject } from "../../node_modules/rxjs/internal/Subject";
 
 export interface IState {
-    id: States;
+    id: StatesAvailable;
     canvas: HTMLCanvasElement;
     context: CanvasRenderingContext2D;
-    addNewStateEmitter: Subject<States>;
-    removeStateEmitter: Subject<States>;
+    addNewStateEmitter: Subject<StatesAvailable>;
+    removeStateEmitter: Subject<StatesAvailable>;
     update(): void;
     draw(): void;
     keyPressed( keyPressed: Key): void;
     keyReleased( keyReleasedID: Key): void;
-    addState( newState: States): void;
-    removeState( returnState?: States): void;
+    mouseDown( mouseX: number, mouseY: number): void;
+    mouseUp( mouseX: number, mouseY: number): void;
+    addState( newState: StatesAvailable): void;
+    removeState( returnState?: StatesAvailable): void;
 }

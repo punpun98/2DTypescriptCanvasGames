@@ -1,7 +1,7 @@
 import { Key } from "../global/key-codes.enum";
 import { StatesAvailable } from "./states.enum";
 import { IState } from "./state.model";
-import { Subject } from "../../node_modules/rxjs/internal/Subject";
+import { Subject } from "../../node_modules/rxjs/index";
 
 export class State implements IState {
     public canvas: HTMLCanvasElement;
@@ -25,6 +25,7 @@ export class State implements IState {
     }
 
     public keyPressed( keyCodeId: Key): void {
+        console.log(Key[keyCodeId]);
         return;
     }
 

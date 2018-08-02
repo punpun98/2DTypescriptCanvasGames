@@ -1,22 +1,24 @@
 import { StatesAvailable } from "../states/states.enum";
 import { IState } from "../states/state.model";
 import { MainMenu } from "../states/main-menu.state";
-import { Subscription } from "../../node_modules/rxjs/internal/Subscription";
-import { fromEvent } from "../../node_modules/rxjs/index";
-
+import { Subscription, Observable, fromEvent } from "../../node_modules/rxjs/index";
 export class Main {
     public canvas: HTMLCanvasElement;
     public context: CanvasRenderingContext2D;
     public states: IState[];
     public keydownEventListener: Subscription;
     public keyupEventListener: Subscription;
-    public mouseClickEventListener: Subscription;
+    public mouseDownEventListener: Subscription;
+    public mouseUpEventListener: Subscription;
 
     constructor( initCanvas: HTMLCanvasElement, initContext: CanvasRenderingContext2D) {
         this.canvas = initCanvas;
         this.context = initContext;
         this.states = [];
         this.addNewState( StatesAvailable.MainMenu );
+
+        window.addEventListener("resize", this._setCanvasToWindowSize);
+
         this.keydownEventListener = fromEvent<KeyboardEvent>(document, "keydown").subscribe( (event: KeyboardEvent) => {
             this.keyPressed(event);
         });
@@ -24,10 +26,10 @@ export class Main {
             this.keyReleased(event);
         });
 
-        this.mouseClickEventListener = fromEvent<MouseEvent>(document, "mousedown").subscribe( (event: MouseEvent) => {
+        this.mouseDownEventListener = fromEvent<MouseEvent>(document, "mousedown").subscribe( (event: MouseEvent) => {
             this.mouseDown(event);
         });
-        this.mouseClickEventListener = fromEvent<MouseEvent>(document, "mouseup").subscribe( (event: MouseEvent) => {
+        this.mouseUpEventListener = fromEvent<MouseEvent>(document, "mouseup").subscribe( (event: MouseEvent) => {
             this.mouseUp(event);
         });
     }
@@ -60,7 +62,13 @@ export class Main {
             .mouseUp( event.x - this.canvas.offsetLeft, event.y - this.canvas.offsetTop );
     }
 
-    private addNewState( stateID: StatesAvailable ): void {
+    public _setCanvasToWindowSize() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+        console.log("test");
+    }
+
+    public addNewState( stateID: StatesAvailable ): void {
         switch ( stateID ) {
             case StatesAvailable.MainMenu :
                 this.states.push(new MainMenu(this.canvas, this.context, StatesAvailable.MainMenu));
@@ -77,7 +85,7 @@ export class Main {
         });
     }
 
-    private returnToState( returnState: StatesAvailable): void {
+    public returnToState( returnState: StatesAvailable): void {
         if (returnState === StatesAvailable.PreviousState) {
             this.states.pop();
             return;
@@ -94,4 +102,5 @@ export class Main {
         }
 
     }
+
 }

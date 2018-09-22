@@ -1,6 +1,6 @@
 import { StatesAvailable } from "../states/states.enum";
 import { IState } from "../states/state.model";
-import { MainMenu } from "../states/main-menu.state";
+import { MainMenu } from "../menus/main-menu.state";
 import { Subscription, Observable, fromEvent } from "../../node_modules/rxjs/index";
 export class Main {
     public canvas: HTMLCanvasElement;

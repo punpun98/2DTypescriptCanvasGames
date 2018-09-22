@@ -1,0 +1,31 @@
+canvas {
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index: 1;
+    left:0;
+    top:0;
+    }
+    .canvasContainer
+{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 1600px;
+    bottom: 900px;
+    z-index: 1;
+    background-color: Black;
+}
+
+@font-face{
+	font-family: "silkscreen"; 
+	src: local("slkscr"), url("assets/fonts/slkscr.ttf");
+    format: ("truetype");
+}
+
+@font-face{
+	font-family: "silkscreenbold"; 
+	src: local("slkscrb"), url("assets/fonts/slkscrb.ttf");
+    format: ("truetype");
+}
+

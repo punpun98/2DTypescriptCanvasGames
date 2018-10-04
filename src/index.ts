@@ -8,7 +8,7 @@ canvas.height = window.innerHeight;
 console.log(window.innerWidth, window.innerHeight);
 const game = new Main(canvas, context);
 console.log("Game Starting!");
-window.setInterval(runGame, "33");
+window.setInterval(runGame, 33);
 
 function runGame() {
     game.update();

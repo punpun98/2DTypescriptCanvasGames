@@ -1,7 +1,4 @@
-# VictusMaximus
-Gladiator Manager Game
-
-Buy, train, fight and sell gladiators.
+# Typescript 2d canvas base project
 
 ## Setting Up Dev Environment
 

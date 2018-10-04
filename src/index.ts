@@ -10,6 +10,11 @@ const game = new Main(canvas, context);
 console.log("Game Starting!");
 window.setInterval(runGame, 33);
 
+// this function runs the game. If this function wasn't there
+// the game would not be run. This is a critical function.
 function runGame() {
+    /* 
+    this method UPDATES the game
+    */
     game.update();
 }

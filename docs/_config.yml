@@ -1,4 +1,4 @@
-remote-theme: alexander-heimbuch/millidocs
+remote_theme: alexander-heimbuch/millidocs
 title: 2D Typescript Canvas Games
 url: https://punpun98.github.io/2DTypescriptCanvasGames/
 description: A library to help improve development of canvas based games.

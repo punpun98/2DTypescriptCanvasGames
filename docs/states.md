@@ -38,68 +38,68 @@ public removeStateEmitter = new Subject<StatesAvailable>();
 ```typescript
 public update(): void
 ```
-#### Params
+###### Params
 
-#### Returns
+###### Returns
 
-#### Errors
+###### Errors
 
 ##### draw
 ```typescript
 public draw(): void
 ```
-#### Params
+###### Params
 
-#### Returns
+###### Returns
 
-#### Errors
+###### Errors
 
 ##### keyPressed
 ```typescript
 public keyPressed( keyCodeId: Key): void
 ```
-#### Params
+###### Params
 
-#### Returns
+###### Returns
 
-#### Errors
+###### Errors
 
 ##### mouseDown
 ```typescript
 public mouseDown( mouseX: number, mouseY: number )
 ```
-#### Params
+###### Params
 
-#### Returns
+###### Returns
 
-#### Errors
+###### Errors
 
-##### mouseUp
+###### mouseUp
 ```typescript
 public mouseUp( mouseX: number, mouseY: number )
 ```
-#### Params
+###### Params
 
-#### Returns
+###### Returns
 
-#### Errors
+###### Errors
 
 ##### addState
 ```typescript
 public addState( newState: StatesAvailable ): void
 ```
-#### Params
+###### Params
 
-#### Returns
+###### Returns
 
-#### Errors
+###### Errors
 
-##### rempveState
+##### removeState
 ```typescript
 public removeState( returnToState?: StatesAvailable): void
 ```
-#### Params
+###### Params
 
-#### Returns
+###### Returns
 
-#### Errors
+###### Errors

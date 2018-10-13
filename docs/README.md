@@ -9,3 +9,15 @@
 - From the project file run `http-server -c-1 --cors`
 - Go To http://localhost:8080 
 
+## runGame
+
+```typescript
+function runGame()
+```
+This function runs the game
+
+### Params
+
+### Returns
+
+### Errors

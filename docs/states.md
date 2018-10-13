@@ -16,9 +16,8 @@ Contains which states can be switched to currently.
 Contains objects that are necessary within the different states
 
 ## State
-### State Class
 A class for creating instances of states
-#### Variables
+### Variables
 ```typescript
 public canvas: HTMLCanvasElement;
 ```
@@ -37,74 +36,74 @@ public addNewStateEmitter = new Subject<StatesAvailable>();
 ```typescript
 public removeStateEmitter = new Subject<StatesAvailable>();
 ```
-#### Functions
+### Functions
 
-##### update
+#### update
 ```typescript
 public update(): void
 ```
-###### Params
+##### Params
 
-###### Returns
+##### Returns
 
-###### Errors
+##### Errors
 
-##### draw
+#### draw
 ```typescript
 public draw(): void
 ```
-###### Params
+##### Params
 
-###### Returns
+##### Returns
 
-###### Errors
+##### Errors
 
-##### keyPressed
+#### keyPressed
 ```typescript
 public keyPressed( keyCodeId: Key): void
 ```
-###### Params
+##### Params
 
-###### Returns
+##### Returns
 
-###### Errors
+##### Errors
 
-##### mouseDown
+#### mouseDown
 ```typescript
 public mouseDown( mouseX: number, mouseY: number )
 ```
-###### Params
+##### Params
 
-###### Returns
+##### Returns
 
-###### Errors
+##### Errors
 
-###### mouseUp
+#### mouseUp
 ```typescript
 public mouseUp( mouseX: number, mouseY: number )
 ```
-###### Params
+##### Params
 
-###### Returns
+##### Returns
 
-###### Errors
+##### Errors
 
-##### addState
+#### addState
 ```typescript
 public addState( newState: StatesAvailable ): void
 ```
-###### Params
+##### Params
 
-###### Returns
+##### Returns
 
-###### Errors
+##### Errors
 
-##### removeState
+#### removeState
 ```typescript
 public removeState( returnToState?: StatesAvailable): void
 ```
-###### Params
+##### Params
 
-###### Returns
+##### Returns
 
-###### Errors
+##### Errors

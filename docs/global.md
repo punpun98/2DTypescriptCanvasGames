@@ -1,6 +1,6 @@
-## Global 
+# Global 
 
-# keys Enum
+## keys Enum
 A utility enum to replace keycodes with a name 
 
 -Example

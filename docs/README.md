@@ -9,8 +9,8 @@
 - From the project file run `http-server -c-1 --cors`
 - Go To http://localhost:8080 
 
-## runGame
-
+## Functions
+### runGame
 ```typescript
 function runGame()
 ```

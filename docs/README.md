@@ -1,3 +1,9 @@
+---
+title: 2D Typescript Canvas Games
+layout: page
+navigation: 1
+---
+
 # Typescript 2d canvas base project
 
 ## Setting Up Dev Environment

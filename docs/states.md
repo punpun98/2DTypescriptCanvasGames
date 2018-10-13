@@ -1,3 +1,8 @@
+---
+title: 2D Typescript Canvas Games
+layout: page
+navigation: 2
+---
 # States
 
 Handles the current state of the game and the switching from different states

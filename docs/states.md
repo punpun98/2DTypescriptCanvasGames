@@ -1,5 +1,5 @@
 ---
-title: 2D Typescript Canvas Games
+title: States
 layout: page
 navigation: 2
 ---
